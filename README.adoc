@@ -1,0 +1,16 @@
+= Toolkit
+jnorthr <james.northrop@orange.fr>
+V0.1, 12 March 2017: Set of Common Tools used in dev.
+
+== Status
+
+*Travis C/I* Project Health -
+image:https://img.shields.io/travis/jnorthr/Toolkit.svg[Build Status (Travis CI), link=https://travis-ci.org/jnorthr/Toolkit]
+
+''''
+
+== Notes About Toolkit
+
+A set of digital tools we use to control the local o/s from within our Java/Groovy/JVM code.
+
+''''
