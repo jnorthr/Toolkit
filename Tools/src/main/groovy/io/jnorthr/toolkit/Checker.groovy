@@ -51,7 +51,8 @@ public class Checker{
     path = "${configPath}"
     file = "${configFile}"
   }
-}""".toString();
+}
+""".toString();
 
 
     /*
@@ -67,17 +68,6 @@ public class Checker{
         config = new ConfigSlurper();  
 
         try{
-			payload = """setup {
-  output {
-    path = "${configPath}"
-    file = "${configFile}"
-  }
-  input {
-    path = "${configPath}"
-    file = "${configFile}"
-  }
-}
-""".toString();
 	        dataObject = config.parse(payload);
 	    }
 	    catch (Exception e)
@@ -106,17 +96,6 @@ public class Checker{
         config = new ConfigSlurper();  
 
         try{
-			payload = """setup {
-  output {
-    path = "${configPath}"
-    file = "${configFile}"
-  }
-  input {
-    path = "${configPath}"
-    file = "${configFile}"
-  }
-}
-""".toString();
 	        dataObject = config.parse(payload);
 	    }
 	    catch (Exception e)
