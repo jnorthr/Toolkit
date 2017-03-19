@@ -115,7 +115,7 @@ Conceptually, a feature method consists of four phases:
     then:
     	// Asserts are implicit and not need to be stated.
     	// Change "==" to "!=" and see what's happening!
-		//sp == homePath;
+		sp == homePath;
  		ss == ".default.config" || ".checker.config"
   } // end of test
 
@@ -123,6 +123,7 @@ Conceptually, a feature method consists of four phases:
   // Forth Test
   def "4th Test: Construct specific config file and populate it"() {
     given: "4th Test: Construct specific config file and populate it"
+		println "4th Test: Use new .configuratorTest4Spec.json file"
 	  	new File(homePath+".configuratorTest4Spec.json").delete()
 		co = new Configurator(".configuratorTest4Spec.json");
 

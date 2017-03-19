@@ -1,6 +1,8 @@
 // need imports to parse JSON samples bottom of this script
 package io.jnorthr.toolkit;
+
 import io.jnorthr.toolkit.PathFinder;
+import java.io.*
 
 /*
  * Feature to confirm a groovy configuration script file exists or build a simple one if it does not
@@ -10,7 +12,7 @@ public class Checker{
     /**
      * These default names point to a groovy script-structured configuration cache where user values are stored between sessions.  
      */
-    String configPath;
+    String configPath = System.getProperty("user.home") + File.separator;
 
     /**
      * This name points to a groovy script-structured configuration name of a file where user values are stored between sessions.  
