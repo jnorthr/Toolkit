@@ -50,3 +50,27 @@ println "jslurper="+jslurper;  // only on Builders-> .toPrettyString();
 
 
 println "--- the end ---"
+
+//-----------------------------------
+// http://stackoverflow.com/questions/19760138/parsing-json-in-java-without-knowing-json-format
+// http://www.journaldev.com/2324/jackson-json-java-parser-api-example-tutorial
+	
+
+Take a look at Jacksons built-in tree model feature.
+
+And your code will be:
+
+public void parse(String json)  {
+       JsonFactory factory = new JsonFactory();
+
+       ObjectMapper mapper = new ObjectMapper(factory);
+       JsonNode rootNode = mapper.readTree(json);  
+
+       Iterator<Map.Entry<String,JsonNode>> fieldsIterator = rootNode.fields();
+       while (fieldsIterator.hasNext()) {
+
+           Map.Entry<String,JsonNode> field = fieldsIterator.next();
+           System.out.println("Key: " + field.getKey() + "\tValue:" + field.getValue());
+       }
+}
+
